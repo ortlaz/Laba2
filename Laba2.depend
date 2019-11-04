@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1572883315 source:c:\users\lenovo\documents\university\c枥文\laba2\main.cpp
+1572890377 source:c:\users\lenovo\documents\university\c枥文\laba2\main.cpp
 	<windows.h>
 	<iostream>
 	"Opz.h"
@@ -33,5 +33,15 @@
 1572880843 source:c:\users\lenovo\documents\university\c枥文\laba2\src\list.cpp
 	"List.h"
 
-1572883279 c:\users\lenovo\documents\university\c枥文\laba2\include\list.h
+1572895765 c:\users\lenovo\documents\university\c枥文\laba2\include\list.h
+	<iostream>
+	"Ppn.h"
+
+1572884258 c:\users\lenovo\documents\university\c枥文\laba2\include\ppn.h
+	<string>
+	<stdlib.h>
+
+1572895696 source:c:\users\lenovo\documents\university\c枥文\laba2\src\ppn.cpp
+	"Ppn.h"
+	"List.h"
 

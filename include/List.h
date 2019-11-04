@@ -1,8 +1,13 @@
 #ifndef LIST_H
 #define LIST_H
+#include <iostream>
+#include "Ppn.h"
+
 template<typename T>
 class List
 {
+    friend class Ppn;
+
     public:
         List();
         ~List();
@@ -11,8 +16,7 @@ class List
         int getSize() {return Size;}
         void removeAt(int index);
 
-        T& top() {return tail->data;}
-
+        T top() {return (tail)? tail->data : -1;}
 
         T& operator[](const int index);
         void pop();
@@ -55,6 +59,7 @@ List<T>::~List()
 
 template<typename T>
 void List<T>::push(T data){
+
      Node<T> *cur = new Node<T>(data);
 
     if(head == 0){
@@ -84,16 +89,28 @@ template<typename T>
 template<typename T>
 void List<T>::removeAt(int index){
 
-    Node<T> *previous = this->head;
+    if (index == 0){
+        Node<T> *temp = head;
+        head = head->next;
+        tail=head;
+        delete temp;
+        Size--;
+	}
+	else
+	{
+        Node<T> *previous = this->head;
 
-    for(int i = 0; i<index - 1; i++){
-        previous = previous->next;
-    }
+        for(int i = 0; i<index - 1; i++){
+            previous = previous->next;
+        }
 
-    Node<T> *toDel = previous->next;
-    previous->next = toDel->next;
-    delete toDel;
-    Size--;
+        Node<T> *toDel = previous->next;
+        tail = previous;
+        previous->next = toDel->next;
+        delete toDel;
+        toDel=nullptr;
+        Size--;
+	}
 }
 
  template<typename T>

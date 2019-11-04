@@ -36,10 +36,12 @@
 		</Compiler>
 		<Unit filename="include/List.h" />
 		<Unit filename="include/Opz.h" />
+		<Unit filename="include/Ppn.h" />
 		<Unit filename="include/Stack.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/List.cpp" />
 		<Unit filename="src/Opz.cpp" />
+		<Unit filename="src/Ppn.cpp" />
 		<Unit filename="src/Stack.cpp" />
 		<Extensions>
 			<code_completion />
