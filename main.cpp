@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Opz.h"
 #include "Stack.h"
+#include "List.h"
 
 using namespace std;
 
@@ -10,7 +11,11 @@ int main()
     SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-		while(1) {
+
+	//TODO: доделать меню
+        //  исправить костыль
+        //  сделать стек на основе списка
+	/*	while(1) {
 			try {
 		       char buf[50];
 		       string str_in;
@@ -28,8 +33,24 @@ int main()
 		       cout << exc << '\n' << endl;
 			}
 		}
+		*/
 
+    List<int> lst;
 
+    lst.push(1);
+    lst.push(11);
+    lst.push(15);
+
+    for (int i=0; i<lst.getSize(); i++){
+        cout<< lst[i]<<endl;
+    }
+
+    cout<<"TOP:"<<lst.top()<<endl;
+
+    lst.pop();
+    for (int i=0; i<lst.getSize(); i++){
+        cout<< lst[i]<<endl;
+    }
     return 0;
 }
 

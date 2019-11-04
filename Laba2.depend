@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1572864365 source:c:\users\lenovo\documents\university\c枥文\laba2\main.cpp
+1572883315 source:c:\users\lenovo\documents\university\c枥文\laba2\main.cpp
 	<windows.h>
 	<iostream>
 	"Opz.h"
 	"Stack.h"
+	"List.h"
 
 1572726936 source:c:\users\lenovo\documents\university\c枥文\laba2\src\massive.cpp
 	"Massive.h"
@@ -14,7 +15,7 @@
 1572857816 c:\users\lenovo\documents\university\c枥文\laba2\include\massive.h
 	<cstdlib>
 
-1572868564 source:c:\users\lenovo\documents\university\c枥文\laba2\src\opz.cpp
+1572871026 source:c:\users\lenovo\documents\university\c枥文\laba2\src\opz.cpp
 	"Opz.h"
 	"Stack.h"
 
@@ -28,4 +29,9 @@
 1572861557 c:\users\lenovo\documents\university\c枥文\laba2\include\stack.h
 	<iostream>
 	"Opz.h"
+
+1572880843 source:c:\users\lenovo\documents\university\c枥文\laba2\src\list.cpp
+	"List.h"
+
+1572883279 c:\users\lenovo\documents\university\c枥文\laba2\include\list.h
 
