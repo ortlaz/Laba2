@@ -79,7 +79,7 @@ void Opz::convert(string str) {
 			       while((current= opStack.pop())!= '(' && np>0) {
 				       outputStr += current;
 				   }
-			   --np;
+			   np--;
 			   break;
            default: {
                cout<<"Error: неопознанный символ\n";
@@ -95,16 +95,23 @@ void Opz::convert(string str) {
 int Opz::calculate(string str) {
 
     Stack<int> valStack; //стек
-    int num1, num2, result;
+    int num1, num2, result =0;
+    string num;
 
     for(int i = 0; i<str.length(); ++i) {
-        if(isDigit(outputStr[i])) {
-            valStack.push(outputStr[i] - '0');
+            if(outputStr[i] == ' ') continue;
+        while(isDigit(outputStr[i]) && i<str.length()) {
+      //    valStack.push(outputStr[i] - '0');
+            num += outputStr[i++];
         }
-        else {
-            if(outputStr[i] == ' '){
-                continue;
-            }
+        if(!num.empty()){
+             valStack.push(atoi(num.c_str()));
+        num.erase();
+        if(i>=outputStr.length())
+            break;
+
+        if(outputStr[i] == ' ') continue;
+        }
             num2 = valStack.pop();
             num1 = valStack.pop();
             switch(outputStr[i]) {
@@ -113,10 +120,9 @@ int Opz::calculate(string str) {
                 case '*': result = num1 * num2; break;
                 case '/': result = num1 / num2; break;
                 default: cout<<"Ошибка !\n";
-        }
+            }
         valStack.push(result);
         }
-    }
     return valStack.pop();
 }
 

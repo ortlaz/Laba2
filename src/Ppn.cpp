@@ -85,7 +85,7 @@ void Ppn::convert(string str) {
                         opStack.pop();
                         outputStr += current;
                     }
-			   --np;
+			   np--;
 			   opStack.pop();
 			   break;
            default: {
@@ -104,16 +104,22 @@ void Ppn::convert(string str) {
 int Ppn::calculate(string str) {
 
     List<int> valStack; //стек
-    int num1, num2, result;
+    int num1, num2, result =0;
+    string num;
 
     for(int i = 0; i<str.length(); ++i) {
-        if(isDigit(outputStr[i])) {
-            valStack.push(outputStr[i] - '0');
+        if(outputStr[i] == ' ') continue;
+        while(isDigit(outputStr[i]) && i<str.length()) {
+             num += outputStr[i++];
         }
-        else {
-            if(outputStr[i] == ' '){
-                continue;
-            }
+        if(!num.empty()){
+             valStack.push(atoi(num.c_str()));
+        num.erase();
+        if(i>=outputStr.length())
+            break;
+
+        if(outputStr[i] == ' ') continue;
+        }
             num2 = valStack.top();
             valStack.pop();
             num1 = valStack.top();
@@ -125,10 +131,9 @@ int Ppn::calculate(string str) {
                 case '*': result = num1 * num2; break;
                 case '/': result = num1 / num2; break;
                 default: cout<<"Ошибка !\n";
-        }
+            }
         valStack.push(result);
         }
-    }
     return valStack.top();
 }
 

@@ -16,7 +16,7 @@ int main()
         //  исправить костыль
         //  c отрицательными числа
         //  и одинарными
-		while(1) {
+		/*while(1) {
 			try {
 		       char buf[50];
 		       string str_in;
@@ -34,7 +34,7 @@ int main()
 		       cout << exc << '\n' << endl;
 			}
 		}
-
+*/
         while(1) {
 			try {
 		       char buf[50];
