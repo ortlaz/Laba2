@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1572964232 source:c:\users\lenovo\documents\university\c枥文\laba2\main.cpp
+1572988115 source:c:\users\lenovo\documents\university\c枥文\laba2\main.cpp
 	<windows.h>
 	<iostream>
 	"Opz.h"
 	"Stack.h"
 	"List.h"
+	"STLStack.h"
 
 1572726936 source:c:\users\lenovo\documents\university\c枥文\laba2\src\massive.cpp
 	"Massive.h"
@@ -44,4 +45,13 @@
 1572963196 source:c:\users\lenovo\documents\university\c枥文\laba2\src\ppn.cpp
 	"Ppn.h"
 	"List.h"
+
+1572987900 source:c:\users\lenovo\documents\university\c枥文\laba2\src\stlstack.cpp
+	"STLStack.h"
+	<iostream>
+	<stack>
+
+1572986684 c:\users\lenovo\documents\university\c枥文\laba2\include\stlstack.h
+	<string>
+	<stdlib.h>
 
