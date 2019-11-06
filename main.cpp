@@ -16,11 +16,13 @@ int main(){
 
     while (var){
         system("cls");
+        //Задание 4
         cout<<"Меню:\n1.Стек на основе списка\n2.Стек на основе массива\n3.Стек STL\n0.Выход\n";
         cout<<"Выберите опцию:";
         cin>>var;
 
         switch(var){
+            //Задание 2
             case 1:{
                char buf1[50];
                 string strin;
@@ -37,6 +39,7 @@ int main(){
 			    break;
 			}
 			case 2:{
+			    //Задание 1
 			     char buf[50];
                 string str_in;
                 cout << "Введите выражение" << endl;
@@ -53,6 +56,7 @@ int main(){
 
 			}
 			case 3:{
+			    //Задание 3
 			    char buf2[50];
                 string strin_g;
                 cout << "Введите выражение" << endl;

@@ -87,8 +87,9 @@ void STLStack::convert(string str) {
                if(op)
 			       cout<<"Ошибка: неверно поставлена скобка!\n";
                else
-			       while(head != '(' && np>0) {
+			       while(opStack.top() != '(' && np>0) {
                         current = head;
+                        cout<<opStack.top();
                         opStack.pop();
                         outputStr += current;
                     }
