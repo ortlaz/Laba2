@@ -9,8 +9,8 @@ using namespace std;
 
 int main(){
 
-    SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+    SetConsoleCP(866);
+	SetConsoleOutputCP(866);
 
     int var;
 
