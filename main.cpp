@@ -10,64 +10,64 @@ using namespace std;
 int main(){
 
     SetConsoleCP(866);
-	SetConsoleOutputCP(866);
+    SetConsoleOutputCP(866);
 
     int var;
 
     while (var){
         system("cls");
-        //Задание 4
-        cout<<"Меню:\n1.Стек на основе списка\n2.Стек на основе массива\n3.Стек STL\n0.Выход\n";
-        cout<<"Выберите опцию:";
+        //Р—Р°РґР°РЅРёРµ 4
+        cout<<"РњРµРЅСЋ:\n1.РЎС‚РµРє РЅР° РѕСЃРЅРѕРІРµ СЃРїРёСЃРєР°\n2.РЎС‚РµРє РЅР° РѕСЃРЅРѕРІРµ РјР°СЃСЃРёРІР°\n3.РЎС‚РµРє STL\n0.Р’С‹С…РѕРґ\n";
+        cout<<"Р’С‹Р±РµСЂРёС‚Рµ РѕРїС†РёСЋ:";
         cin>>var;
 
         switch(var){
-            //Задание 2
+            //Р—Р°РґР°РЅРёРµ 2
             case 1:{
                char buf1[50];
                 string strin;
-                cout << "Введите выражение" << endl;
+                cout << "Р’РІРµРґРёС‚Рµ РІС‹СЂР°Р¶РµРЅРёРµ" << endl;
                 cin >> buf1;                          //get the input string
                 if(buf1[0] == '0') break;
                 strin = buf1;
 
                 Ppn ppn;
                 ppn.convert(strin);
-                cout << "Обратная польска запись:" << ppn.getOutputStr()<< endl;
-                cout<<"Результат:"<<ppn.calculate(ppn.getOutputStr())<<endl;
+                cout << "РћР±СЂР°С‚РЅР°СЏ РїРѕР»СЊСЃРєР° Р·Р°РїРёСЃСЊ:" << ppn.getOutputStr()<< endl;
+                cout<<"Р РµР·СѓР»СЊС‚Р°С‚:"<<ppn.calculate(ppn.getOutputStr())<<endl;
                 system("pause");
 			    break;
 			}
 			case 2:{
-			    //Задание 1
+			    //Р—Р°РґР°РЅРёРµ 1
 			     char buf[50];
                 string str_in;
-                cout << "Введите выражение" << endl;
+                cout << "Р’РІРµРґРёС‚Рµ РІС‹СЂР°Р¶РµРЅРёРµ" << endl;
                 cin >> buf;                          //get the input string
                 if(buf[0] == '0') break;
                 str_in = buf;
 
                 Opz ppn;
                 ppn.convert(str_in);
-                cout << "Обратная польска запись:" << ppn.getOutputStr()<< endl;
-                cout<<"Результат:"<<ppn.calculate(ppn.getOutputStr())<<endl;
+                cout << "РћР±СЂР°С‚РЅР°СЏ РїРѕР»СЊСЃРєР° Р·Р°РїРёСЃСЊ:" << ppn.getOutputStr()<< endl;
+                cout<<"Р РµР·СѓР»СЊС‚Р°С‚:"<<ppn.calculate(ppn.getOutputStr())<<endl;
                 system("pause");
                 break;
 
 			}
 			case 3:{
-			    //Задание 3
+			    //Р—Р°РґР°РЅРёРµ 3
 			    char buf2[50];
                 string strin_g;
-                cout << "Введите выражение" << endl;
+                cout << "Р’РІРµРґРёС‚Рµ РІС‹СЂР°Р¶РµРЅРёРµ" << endl;
                 cin >> buf2;                          //get the input string
                 if(buf2[0] == '0') break;
                 strin_g = buf2;
 
                 STLStack ppn;
                 ppn.convert(strin_g);
-                cout << "Обратная польска запись:" << ppn.getOutputStr()<< endl;
-                cout<<"Результат:"<<ppn.calculate(ppn.getOutputStr())<<endl;
+                cout << "РћР±СЂР°С‚РЅР°СЏ РїРѕР»СЊСЃРєР° Р·Р°РїРёСЃСЊ:" << ppn.getOutputStr()<< endl;
+                cout<<"Р РµР·СѓР»СЊС‚Р°С‚:"<<ppn.calculate(ppn.getOutputStr())<<endl;
                 system("pause");
                 break;
 			}
@@ -77,7 +77,7 @@ int main(){
                 break;
 			}
             default:{
-            cout<<"Выберите опцию из списка!\n";
+            cout<<"Р’С‹Р±РµСЂРёС‚Рµ РѕРїС†РёСЋ РёР· СЃРїРёСЃРєР°!\n";
             system("pause");
             break;
             }

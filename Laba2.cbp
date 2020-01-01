@@ -33,6 +33,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-finput-charset=utf-8 -fexec-charset=cp866" />
 		</Compiler>
 		<Unit filename="include/List.h" />
 		<Unit filename="include/Opz.h" />

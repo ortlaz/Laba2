@@ -26,23 +26,23 @@ char STLStack::nextChar() {
     else return current = '\0';
 }
 
-//полученная строка
+//РїРѕР»СѓС‡РµРЅРЅР°СЏ СЃС‚СЂРѕРєР°
 string STLStack::getOutputStr(){
 	return outputStr;
 }
 
-//преобразование в ОПЗ
+//РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ РћРџР—
 void STLStack::convert(string str) {
-    int op = 0, np = 0;    //флаги, показывающие наличие операторов и скобок
+    int op = 0, np = 0;    //С„Р»Р°РіРё, РїРѕРєР°Р·С‹РІР°СЋС‰РёРµ РЅР°Р»РёС‡РёРµ РѕРїРµСЂР°С‚РѕСЂРѕРІ Рё СЃРєРѕР±РѕРє
 
     indInpStr= 0;
-    stack <char> opStack;    //стек
+    stack <char> opStack;    //СЃС‚РµРє
     char head;
     inputStr = str;
 	outputStr.erase();
 
     if((!isDigit(inputStr[0])) && inputStr[0]!='(')
-        cout<<"Ошибка: неправильно записано выражение!\n";
+        cout<<"РћС€РёР±РєР°: РЅРµРїСЂР°РІРёР»СЊРЅРѕ Р·Р°РїРёСЃР°РЅРѕ РІС‹СЂР°Р¶РµРЅРёРµ!\n";
 
     while (nextChar() != '\0') {
        if(opStack.empty()){
@@ -65,7 +65,7 @@ void STLStack::convert(string str) {
 			   break;
            case '*': case '/': case '+': case '-':
                if(indInpStr == inputStr.length())
-			       cout<<"Ошибка: оператор не может стоять в конце!\n";
+			       cout<<"РћС€РёР±РєР°: РѕРїРµСЂР°С‚РѕСЂ РЅРµ РјРѕР¶РµС‚ СЃС‚РѕСЏС‚СЊ РІ РєРѕРЅС†Рµ!\n";
 
                if(!op) {
 			       op = 1;
@@ -81,11 +81,11 @@ void STLStack::convert(string str) {
 				   }
 			       break;
 			   }
-               else cout<<"Ошибка приоритета операции!\n";
+               else cout<<"РћС€РёР±РєР° РїСЂРёРѕСЂРёС‚РµС‚Р° РѕРїРµСЂР°С†РёРё!\n";
 
            case ')':
                if(op)
-			       cout<<"Ошибка: неверно поставлена скобка!\n";
+			       cout<<"РћС€РёР±РєР°: РЅРµРІРµСЂРЅРѕ РїРѕСЃС‚Р°РІР»РµРЅР° СЃРєРѕР±РєР°!\n";
                else
 			       while(opStack.top() != '(' && np>0) {
                         current = head;
@@ -97,7 +97,7 @@ void STLStack::convert(string str) {
 			   opStack.pop();
 			   break;
            default: {
-               cout<<"Error: неопознанный символ\n";
+               cout<<"Error: РЅРµРѕРїРѕР·РЅР°РЅРЅС‹Р№ СЃРёРјРІРѕР»\n";
 	       }
 	   }
 	}
@@ -106,12 +106,12 @@ void STLStack::convert(string str) {
 	    opStack.pop();
     }
     if(np)
-	    cout<<"Error: неравное кол-во скобок!\n";
+	    cout<<"Error: РЅРµСЂР°РІРЅРѕРµ РєРѕР»-РІРѕ СЃРєРѕР±РѕРє!\n";
 }
 
 int STLStack::calculate(string str) {
 
-    stack<int> valStack; //стек
+    stack<int> valStack; //СЃС‚РµРє
     int num1, num2, result =0, start;
     string num;
 
@@ -138,7 +138,7 @@ int STLStack::calculate(string str) {
                 case '-': result = num1 - num2; break;
                 case '*': result = num1 * num2; break;
                 case '/': result = num1 / num2; break;
-                default: cout<<"Ошибка !\n";
+                default: cout<<"РћС€РёР±РєР° !\n";
             }
         valStack.push(result);
         }

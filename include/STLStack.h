@@ -8,17 +8,17 @@
 using namespace std;
 
 class STLStack {
-    char current;                   //текущий символ
-	string inputStr, outputStr;     //входная и выходная строки
-    int indInpStr;                  //индекс символа входной строки
+    char current;                   //С‚РµРєСѓС‰РёР№ СЃРёРјРІРѕР»
+	string inputStr, outputStr;     //РІС…РѕРґРЅР°СЏ Рё РІС‹С…РѕРґРЅР°СЏ СЃС‚СЂРѕРєРё
+    int indInpStr;                  //РёРЅРґРµРєСЃ СЃРёРјРІРѕР»Р° РІС…РѕРґРЅРѕР№ СЃС‚СЂРѕРєРё
 
-    char nextChar();            //следующий символ строки
+    char nextChar();            //СЃР»РµРґСѓСЋС‰РёР№ СЃРёРјРІРѕР» СЃС‚СЂРѕРєРё
 	bool isDigit(char c);
-    int priorOp(char c);        //приоритет операций
+    int priorOp(char c);        //РїСЂРёРѕСЂРёС‚РµС‚ РѕРїРµСЂР°С†РёР№
 
   public:
-    void convert(string);       //преобразование в ОПЗ
-    string getOutputStr();      //выходная строка
+    void convert(string);       //РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ РћРџР—
+    string getOutputStr();      //РІС‹С…РѕРґРЅР°СЏ СЃС‚СЂРѕРєР°
     int calculate(string str_in);
 };
 
